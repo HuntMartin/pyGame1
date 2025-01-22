@@ -110,7 +110,13 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
-
+        #Background music muted key m or unmuted key binds for ctrl+m 
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_m]:
+            mixer.music.stop()
+            if keys[pygame.K_LCTRL]:
+                mixer.music.load("background.wav")
+                mixer.music.play(-1)
         # if keystroke is pressed check whether its right or left
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
