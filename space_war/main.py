@@ -103,6 +103,8 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
     else:
         return False
 
+#Clock for controlling the frame rate
+clock = pygame.time.Clock()
 
 # Game Loop
 running = True
@@ -193,3 +195,5 @@ while running:
     show_score(textX, testY)
     show_bgmControl_instr()
     pygame.display.update()
+
+    clock.tick(70)
