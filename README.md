@@ -2,4 +2,7 @@ Here the game is about the space crafter locates at bottom and only can horizont
 venv is prepped insides the space_war folder. Using python to run the main.py, game will start but there are bunches of bugs need to solve. 
 
 Function add:
-    Added ESC to quit the game. 
+    Added ESC to quit the game.
+    Added m to mute the bgm.
+    Added ctrl + m to unmute the bgm.
+    Added a hint for user to know how to mute or unmute bgm. 

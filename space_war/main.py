@@ -61,7 +61,7 @@ score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
 
 textX = 10
-testY = 10
+testY = 15
 
 # Game Over
 over_font = pygame.font.Font('freesansbold.ttf', 64)
@@ -70,6 +70,11 @@ over_font = pygame.font.Font('freesansbold.ttf', 64)
 def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
+
+def show_bgmControl_instr():
+    font = pygame.font.Font(None, 20)
+    bgm_instruction = font.render("Mute bgm: M Unmuted bgm: LCTRL + M", True, "Red" )
+    screen.blit(bgm_instruction, (0, 0))
 
 
 def game_over_text():
@@ -186,4 +191,5 @@ while running:
 
     player(playerX, playerY)
     show_score(textX, testY)
+    show_bgmControl_instr()
     pygame.display.update()
